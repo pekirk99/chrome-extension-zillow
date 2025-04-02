@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Zillow Sidebar Search",
+    "version": "1.7",
+    "permissions": ["sidePanel", "scripting"],
+    "host_permissions": ["<all_urls>"],
+    "action": {
+      "default_title": "Zillow Search"
+    },
+    "side_panel": {
+      "default_path": "hello.html"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
